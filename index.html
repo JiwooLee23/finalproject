@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>interactive final project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+<body>
+  <div id="spacebar">
+  <div class="word"></div>
+  <h2 id="clickme"> ↙click me! </h2>
+  <img id="cat" src="catimg.png" width="20%"></img>
+  <h1 id="counter">Hitting the spacebar for <span class="hits">0</span> times.</h1>
+  </div>
+</body>
+
+<!-- javascript -->
+<script>
+var hits = 0;
+var hitElement = document.querySelector( '.hits' );
+document.body.onkeyup = function(e) {
+  if( e.keyCode == 32 ) {
+    addHit();}
+}
+var addHit = function(){
+  hits++;
+  if(hits > 9){
+    window.location = "https://jiwoolee23.github.io/cat/index.html"}
+  renderHits();
+}
+var renderHits = function() {
+  hitElement.innerHTML = hits;
+}
+var resetHits = function() {
+  hits = 0;
+  renderHits();
+}
+// class에서 썻던거 응용
+$("document").ready(function(){
+  var myDiv = $("#cat");
+  var index = 0;
+  var words = ["wow", "cool", "having fun?٩( ᐛ )و ", "🧀?", "hit the spacebar?"]
+  myDiv.css ({"color" : "red"})
+  myDiv.click(function(){
+    if(index < words.length){
+    $(".word").append("<div class='words'>" + words[index] + "</div>");
+    index++}
+})
+})
+</script>
+</html>

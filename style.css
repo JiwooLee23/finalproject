@@ -1,0 +1,41 @@
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: table;}
+
+#spacebar{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+  background-color: black;
+  color: white;}
+
+.h1{
+  font-family: arial, sans-serif;}
+
+a:link, a:hover, a:visited, a:active{
+	text-decoration: none;}
+
+.hits{
+  font-size: 3em;
+  font-weight: bolder;}
+
+/* 고양이를 click했을때 slide하는 글자들을 위한 코딩 */
+.words{
+  color: blue;
+  font-size: 50px;
+  font-weight: bold;
+  transform: translate(0px);
+  animation: slidein 4s linear 1s infinite alternate;}
+
+@keyframes slidein{
+  from { transform: translate(0px);}
+  to { transform: translate(300px);}}
+
+#clickme{
+	margin-left:25%;
+	margin-top:0%;}
