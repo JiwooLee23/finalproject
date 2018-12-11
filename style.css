@@ -1,6 +1,8 @@
 body{
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-style : italic;
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
